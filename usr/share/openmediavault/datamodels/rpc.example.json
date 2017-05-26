@@ -1,0 +1,19 @@
+[{
+	"type": "rpc",
+	"id": "rpc.example.setsettings",
+	"params": {
+		"type": "object",
+		"properties": {
+		    "enable": {
+		        "type": "boolean",
+		        "required": true
+		    },
+			"max_value": {
+			    "type": "integer",
+			    "minimum": 0,
+				"maximum": 100,
+		        "required": true
+			}
+		}
+	}
+}]

@@ -1,0 +1,5 @@
+openmediavault-example (1.0.0) stable; urgency=low
+
+  * initial release
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Sat, 18 Mar 2017 10:31:40 -0500
