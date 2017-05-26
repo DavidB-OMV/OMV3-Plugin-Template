@@ -9,7 +9,6 @@ Homepage: http://omv-extras.org/
 
 Package: openmediavault-example
 Architecture: all
-Depends: example (>= 1.1.2),
-         openmediavault (>= 3.0.67),
+Depends: openmediavault (>= 3.0.67),
          ${misc:Depends}
 Description: example plugin
