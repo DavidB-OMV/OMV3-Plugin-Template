@@ -1,0 +1,16 @@
+#!/bin/sh
+
+set -e
+
+. /etc/default/openmediavault
+. /usr/share/openmediavault/scripts/helper-functions
+
+OMV_EXAMPLE_XPATH="/config/services/example"
+OMV_EXAMPLE_CONF="/tmp/example.conf"
+
+cat <<EOF > ${OMV_EXAMPLE_CONF}
+enable    = $(omv_config_get "${OMV_EXAMPLE_XPATH}/enable")
+max_value = $(omv_config_get "${OMV_EXAMPLE_XPATH}/max_value")
+EOF
+
+exit 0
