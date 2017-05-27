@@ -15,23 +15,6 @@ class OMVModuleExample extends \OMV\Engine\Module\ServiceAbstract
         $cmd->execute();
     }
 
-    public function startService()
-    {
-        $db = \OMV\Config\Database::getInstance();
-        $object = $db->get("conf.service.example");
-        if (TRUE !== $object->get("enable"))
-            return;
-        // Start this service and enable the unit file.
-        $systemCtl = new \OMV\System\SystemCtl("example");
-        $systemCtl->enable(TRUE);
-    }
-
-    public function stopService()
-    {
-        $systemCtl = new \OMV\System\SystemCtl("example");
-        $systemCtl->disable(TRUE);
-    }
-
     public function getStatus()
     {
         $db = \OMV\Config\Database::getInstance();
